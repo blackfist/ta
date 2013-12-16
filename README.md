@@ -33,25 +33,78 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
 # Output
 
 ````
-      "authors": [                                                                                                                                                                     
-        {                                                                                                                                                                              
-          "_id": {                                                                                                                                                                     
-            "$oid": "52af7e247275620755010000"                                                                                                                                         
-          },                                                                                                                                                                           
-          "first_name": "Robert",                                                                                                                                                      
-          "handle": null,                                                                                                                                                              
-          "last_name": "Lemos"                                                                                                                                                         
-        }                                                                                                                                                                              
-      ],                                                                                                                                                                               
-      "date_accessed": "2013-12-16",                                                                                                                                                   
-      "date_published": "2013-09-18",                                                                                                                                                  
-      "intel_discipline": "OSINT",                                                                                                                                                     
-      "number": 1,                                                                                                                                                                     
-      "organization": "eWeek",                                                                                                                                                         
-      "title": "'Hidden Lynx' Group Hacks for Highest Bidder: Symantec Report",                                                                                                        
-      "tlp": "WHITE",                                                                                                                                                                  
-      "url": "http://www.eweek.com/security/hidden-lynx-group-hacks-for-highest-bidder-symantec-report.html"                                                                           
-    }                                                                                                                                                                                  
-  ]                                                                                                                                                                                    
+{
+  "_id": null,
+  "actor_id": "58B6AAF6-E198-416F-BAEA-7F61E5302085",
+  "aliases": [
+    {
+      "_id": {
+        "$oid": "52af7e937275620779020000"
+      },
+      "name": "Hidden Lynx",
+      "organization": "Symantec",
+      "sources": [
+        1
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "52af7e937275620779030000"
+      },
+      "name": "Aurora Panda",
+      "organization": "Crowdstrike",
+      "sources": [
+        1
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "_id": {
+        "$oid": "52af7e937275620779040000"
+      },
+      "name": "CN",
+      "sources": [
+        1
+      ]
+    }
+  ],
+  "motives": [
+    {
+      "_id": {
+        "$oid": "52af7e937275620779050000"
+      },
+      "sources": [
+        1
+      ],
+      "variety": "Financial"
+    }
+  ],
+  "schema_version": "0.1",
+  "sources": [
+    {
+      "_id": {
+        "$oid": "52af7e927275620779000000"
+      },
+      "authors": [
+        {
+          "_id": {
+            "$oid": "52af7e927275620779010000"
+          },
+          "first_name": "Robert",
+          "handle": null,
+          "last_name": "Lemos"
+        }
+      ],
+      "date_accessed": "2013-12-16",
+      "date_published": "2013-09-18",
+      "intel_discipline": "OSINT",
+      "number": 1,
+      "organization": "eWeek",
+      "title": "'Hidden Lynx' Group Hacks for Highest Bidder: Symantec Report",
+      "tlp": "WHITE",
+      "url": "http://www.eweek.com/security/hidden-lynx-group-hacks-for-highest-bidder-symantec-report.html"
+    }
+  ]
 }
 ````
