@@ -1,3 +1,8 @@
+#WTH
+I was looking at Open Source intel about threat actors and I got irritated that I didn't have a standard
+way of describing and linking threat actors. Then I looked at STIX and threw up in my mouth because of 
+all the XML. I though I would mess around and see if I could make something that I liked better.
+
 # Things left to do
 This thing would still need some way to track which campaigns are associated with the Threat Actor and
 also needs a way to track iocs associated with the Threat Actor. Possibly by embedding VERIS incidents
