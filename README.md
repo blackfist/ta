@@ -26,7 +26,7 @@ in an array.
 @ta.aliases << Alias.new(name:"Aurora Panda",organization:"Crowdstrike",sources:[1])
 @ta.countries << Country.new(name:"CN",sources:[1])
 @ta.motives << Motive.new(variety:"Financial",sources:[1])
-puts JSON.pretty_generate(JSON.parse(@ta.to_json))
+puts JSON.pretty_generate(JSON.parse(@ta.to_json(except: "_id")))
 @test = ThreatActor.find_by("sources.organization" => "eWeek")
 ````
 
@@ -34,13 +34,9 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
 
 ````
 {
-  "_id": null,
-  "actor_id": "58B6AAF6-E198-416F-BAEA-7F61E5302085",
+  "actor_id": "074FA655-AF1A-423C-B241-403FD60B004A",
   "aliases": [
     {
-      "_id": {
-        "$oid": "52af7e937275620779020000"
-      },
       "name": "Hidden Lynx",
       "organization": "Symantec",
       "sources": [
@@ -48,9 +44,6 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
       ]
     },
     {
-      "_id": {
-        "$oid": "52af7e937275620779030000"
-      },
       "name": "Aurora Panda",
       "organization": "Crowdstrike",
       "sources": [
@@ -60,9 +53,6 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
   ],
   "countries": [
     {
-      "_id": {
-        "$oid": "52af7e937275620779040000"
-      },
       "name": "CN",
       "sources": [
         1
@@ -71,9 +61,6 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
   ],
   "motives": [
     {
-      "_id": {
-        "$oid": "52af7e937275620779050000"
-      },
       "sources": [
         1
       ],
@@ -83,14 +70,8 @@ puts JSON.pretty_generate(JSON.parse(@ta.to_json))
   "schema_version": "0.1",
   "sources": [
     {
-      "_id": {
-        "$oid": "52af7e927275620779000000"
-      },
       "authors": [
         {
-          "_id": {
-            "$oid": "52af7e927275620779010000"
-          },
           "first_name": "Robert",
           "handle": null,
           "last_name": "Lemos"
