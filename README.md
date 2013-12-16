@@ -29,3 +29,29 @@ in an array.
 puts JSON.pretty_generate(JSON.parse(@ta.to_json))
 @test = ThreatActor.find_by("sources.organization" => "eWeek")
 ````
+
+# Output
+
+````
+      "authors": [                                                                                                                                                                     
+        {                                                                                                                                                                              
+          "_id": {                                                                                                                                                                     
+            "$oid": "52af7e247275620755010000"                                                                                                                                         
+          },                                                                                                                                                                           
+          "first_name": "Robert",                                                                                                                                                      
+          "handle": null,                                                                                                                                                              
+          "last_name": "Lemos"                                                                                                                                                         
+        }                                                                                                                                                                              
+      ],                                                                                                                                                                               
+      "date_accessed": "2013-12-16",                                                                                                                                                   
+      "date_published": "2013-09-18",                                                                                                                                                  
+      "intel_discipline": "OSINT",                                                                                                                                                     
+      "number": 1,                                                                                                                                                                     
+      "organization": "eWeek",                                                                                                                                                         
+      "title": "'Hidden Lynx' Group Hacks for Highest Bidder: Symantec Report",                                                                                                        
+      "tlp": "WHITE",                                                                                                                                                                  
+      "url": "http://www.eweek.com/security/hidden-lynx-group-hacks-for-highest-bidder-symantec-report.html"                                                                           
+    }                                                                                                                                                                                  
+  ]                                                                                                                                                                                    
+}
+````
