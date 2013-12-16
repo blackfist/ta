@@ -4,6 +4,8 @@ also needs a way to track iocs associated with the Threat Actor. Possibly by emb
 in an array.
 
 #Basic example
+
+````
 @ta = ThreatActor.new()
 @ta.actor_id = SecureRandom.uuid.upcase
 @ta.sources << Source.new(title:"'Hidden Lynx' Group Hacks for Highest Bidder: Symantec Report", 
@@ -21,3 +23,4 @@ in an array.
 @ta.motives << Motive.new(variety:"Financial",sources:[1])
 puts JSON.pretty_generate(JSON.parse(@ta.to_json))
 @test = ThreatActor.find_by("sources.organization" => "eWeek")
+````
